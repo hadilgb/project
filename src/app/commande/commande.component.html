@@ -1,0 +1,45 @@
+<div class="navbar" >
+    <nav>
+        <a routerLink="/menus">Menus</a>
+        <a href="/livreur">Livreurs</a>
+        <a href="/recette">Recette</a>
+        <a href="/abonnement">Abonnement</a>
+        <a href="/commande">Commande</a>
+        <div class="animation start-Menus"></div>
+    </nav>
+</div> 
+<div class="cols row row-cols-1 row-cols-md-2">
+    <div class="card" style="width: 18rem;" *ngFor="let temp of commandes">
+    <div *ngFor="let temp1 of temp.repas">
+        <p>{{temp1.nom}}</p>
+    </div>
+    <p class="pp"> Adresse : {{temp.client.adresse}}</p>
+    <p class="pp"> Téléphone : {{temp.client.tel}}</p>
+     <button class="bt1" (click)="confirmer(temp)" >confirmer</button>
+     <button class="bt2" (click)="annuler(temp)" >annuler</button>
+    </div>
+    
+</div>
+<div class="cols row row-cols-1 row-cols-md-2">
+    <div class="card" style="width: 18rem;" *ngFor="let temp of commandesval">
+    <div *ngFor="let temp1 of temp.repas">
+        <p>{{temp1.nom}}</p>
+    </div>
+    <p class="pp"> Adresse : {{temp.client.adresse}}</p>
+    <p class="pp"> Téléphone : {{temp.client.tel}}</p>
+    <button class="bt3" (click)="valider(temp)" >valider</button>
+    </div>
+    
+</div>
+<div class="ajoucmd">
+<fieldset><legend>ajouter une commande</legend>
+    <div class="row row-cols-1 row-cols-md-3">
+    <div class="card" *ngFor="let temp1 of Repass">
+    
+    <img src="{{temp1.img}}">
+    <p>{{temp1.nom}}</p>
+    <button (click)="ajoutrep(temp1)">ajouter</button>
+    </div></div>
+    <button (click)="ajout()">ajouter</button>
+</fieldset>
+</div>

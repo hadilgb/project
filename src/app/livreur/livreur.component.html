@@ -1,0 +1,74 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="navbar" >
+            <nav>
+                <a routerLink="/menus">Menus</a>
+                <a href="/livreur">Livreurs</a>
+                <a href="/recette">Recette</a>
+                <a href="/abonnement">Abonnement</a>
+                <a href="/commande">Commande</a>
+                <div class="animation start-Menus"></div>
+            </nav>
+        </div> 
+        <hr>
+        <h1 class="titre">Nos Livreurs</h1>
+        <form>
+        <input type="search" class="rech" placeholder="Recherche">
+        <button type="button" class="btt" (click)="ajouter()">Ajouter</button>
+        </form>
+        <hr>
+        <table >
+            <tr>
+                <th>Cin</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Téléphone</th>
+                <th></th>
+            </tr>
+           <tr *ngFor="let temp of livreurs">
+              <td>{{temp.cin}}</td>
+              <td>{{temp.nom}}</td>
+              <td>{{temp.prenom}}</td>
+              <td>{{temp.tel}}</td>
+              <td><a class="btn btn-danger" (click)="supprimerliv(temp)">supprimer</a>
+                  <a class="btn btn-success" (click)="update(temp.id)">Modifier</a>
+            </td>
+           </tr>
+        </table>
+        <div>
+            <form  class="ajouter" *ngIf="show3" [formGroup]="formajout">
+               <b> <p>Ajouter un livreur</p></b>
+                <img  src="/assets/image/annuler.png" class="img">
+                <hr>
+                <input type="text" placeholder="Nom" formControlName="nom">
+                
+                <input type="text" placeholder="Prénom" formControlName="prenom">
+                <br>
+                <input type="text" placeholder="CIN" formControlName="cin">
+                
+                <input type="text" placeholder="Téléphone" formControlName="tel"><br>
+                <button type="reset" class="bt">Annuler</button>
+                <button type="button" class="bt" (click)="ajoutlivreur()">Enregistrer</button>
+            </form>
+        </div>
+        <div>
+            <form  class="editer" *ngIf="show4" [formGroup]="formaupdate">
+               <b> <p>Modifier un livreur</p></b>
+                <img  src="/assets/image/annuler.png" class="img">
+                <hr>
+                <input type="text" placeholder="Nom" formControlName="nomm">
+                
+                <input type="text" placeholder="Prénom" formControlName="prenomm">
+                <br>
+                <input type="text" placeholder="CIN" formControlName="cinn">
+                
+                <input type="text" placeholder="Téléphone" formControlName="tell"><br>
+                <button type="reset" class="bt">Annuler</button>
+                <button type="button" class="bt" (click)="updatelivreur()">Enregistrer</button>
+            </form>
+        </div>
+    </body>
+</html>

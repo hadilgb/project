@@ -1,0 +1,51 @@
+<html>
+<body>
+  
+<div class="fr">
+  <div class='button-box'>
+    
+    <button type='submit'  (click)="login()" class='toggle-btn' id="log">Connexion</button>
+    <button type='submit'  (click)="register()" class='toggle-btn' id="reg">Inscription</button>
+  
+  <div class="annimation start"></div>
+</div>
+<form id="login" *ngIf="show1" [formGroup]="formlog" >
+  <p>Email</p>
+ <input type="email" formControlName="login" id="int" placeholder="Entrez votre Email">
+ <br><br>
+<p>Mot de passe</p>
+ <input type="password" formControlName="pass" placeholder="Entrez votre Mot de passe">
+ <br>
+ <a href="">Mot de passe oublier ?</a>
+ <br>
+ <button type="Submit"  [disabled]="!formlog.valid"  routerLink="/menus"  class="bt" value="Connexion">Connexion</button>
+</form>
+  <form  >
+    <div id="register" [formGroup]="formreg1" *ngIf="show2">
+    <p>Nom</p>
+    <input type="text" formControlName="name"  placeholder="Entrez votre Nom">
+    
+    <p>Prénom</p>
+    <input type="text" formControlName="prenom"  placeholder="Entrez votre Prénom">
+  
+    <p>Téléphone</p>
+    <input type="text" formControlName="tel" placeholder="Entrez votre Téléphone">
+    <button type="submit" class="bt"  (click)="register2()" [disabled]="!formreg1.valid" value="register">Suivant</button>
+  </div>
+    <div id="register2" [formGroup]="formreg2" *ngIf="show3">
+    <p>Email</p>
+   <input type="email" formControlName="email" placeholder="Entrez votre Email">
+   <br><br>
+  <p>Mot de passe</p>
+   <input type="password" formControlName="mdp" placeholder="Entrez votre Mot de passe">
+   <div *ngIf="gg">ce champs est obligatoire</div>
+   <button type="submit" class="bt"  (click)="submitreg()" [disabled]="!formreg2.valid" value="register">Crée mon compte</button>
+  </div>
+   <br>
+   
+   
+  </form>
+  
+</div>
+</body>
+</html>

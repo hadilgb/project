@@ -1,0 +1,241 @@
+/*body{
+    background-image: url("C:/Users/PC/Desktop/project/FOODCHINY/src/assets/image/bgcc.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 741px;  
+    margin-top: -150px;
+    
+    
+  }*/
+  .card{
+      margin-left: 40px ;
+      margin-bottom: 30px;
+      box-shadow: #000;
+}
+  .titre{
+      font-style: italic;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-left: 30px;
+      color: rgb(255, 9, 33);
+  }
+  .rech{
+      position: absolute;
+      margin-left: 1000px;
+      margin-top: -50px;
+      outline: none;
+  }
+  .btt{
+      position: absolute;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(255, 9, 33);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 100px;
+    margin-left: 1230px;
+    margin-top: -55px;
+}
+.btt:hover{
+    background: rgb(228, 19, 40);
+}
+.icon{
+    padding-left: 50px;
+}
+.icon3{
+    padding-left: 20px;
+}
+.icon1{
+    padding-left: 20px;
+}
+.menus .p{
+    margin-left: 50px;
+    margin-top: -30px;
+}
+
+.prix{
+  margin-top: -30px;
+  margin-left: 130px;
+}
+.ajout{
+    background-image: url("C:/Users/PC/Desktop/project/FOODCHINY/src/assets/image/back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 590px;
+
+    
+}
+.ajoutform{
+    color: #fff;
+    top: 60%;
+    left: 70%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    width: 320px;
+    height: 420px;
+    padding: 70px 30px;
+    background-color: rgba(0,0, 0,0.6);
+}
+.ajout h4{
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 9, 33);
+    margin-top: -20px;
+    margin-left: 20px;
+    
+    
+}
+.ajout input,textarea{
+    width: 200px;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #fff;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.bt{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(255, 9, 33);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 250px;
+}
+.bt:hover{
+    cursor: pointer;
+    background: #ad1313;
+}
+.ajoutform input:focus{
+    border-color:  rgb(255, 9, 33);
+ 
+}
+.modifier{
+    background-image: url("C:/Users/PC/Desktop/project/FOODCHINY/src/assets/image/back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 590px;
+
+    
+}
+.modform{
+    color: #fff;
+    top: 60%;
+    left: 70%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    width: 320px;
+    height: 420px;
+    padding: 70px 30px;
+    background-color: rgba(0,0, 0,0.6);
+}
+.modifier h4{
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 9, 33);
+    margin-top: -20px;
+    margin-left: 20px;
+    
+    
+}
+.modifier input,textarea{
+    width: 200px;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #fff;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.modform input:focus{
+    border-color:  rgb(255, 9, 33);
+ 
+}
+.navbar{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+nav{
+    width: 590px;
+    height: 50px;
+    background-color: #fff;
+    font-size: 0px;
+}
+nav a{
+    font-size: 15px;
+    color: dimgrey;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+nav .animation{
+    position: absolute;
+    height: 3px;
+    bottom: 0px;
+
+    z-index: 0;
+    background-color: #fff;
+    transition: all .5s ease 0s;
+    
+
+}
+a:nth-child(1){
+    width: 100px;
+}
+
+nav .start-Menus,a:nth-child(1):focus~.animation{
+    width: 100px;
+    left: 0;
+    background-color: rgb(255, 9, 33);
+}
+a:nth-child(2){
+    width: 110px;
+  
+}
+
+nav .start-Menus,a:nth-child(2):focus~.animation{
+    width: 110px;
+    left: 100px;
+}
+a:nth-child(3){
+    width: 120px;
+}
+
+nav .start-Menus,a:nth-child(3):focus~.animation{
+    width: 100px;
+    left: 220px;
+}
+a:nth-child(4){
+    width: 130px;
+}
+
+nav .start-Menus,a:nth-child(4):focus~.animation{
+    width: 100px;
+    left: 345px;
+}
+a:nth-child(5){
+    width: 130px;
+}
+
+nav .start-Menus,a:nth-child(5):focus~.animation{
+    width: 100px;
+    left: 477px;
+}

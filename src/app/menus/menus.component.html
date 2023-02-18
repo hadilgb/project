@@ -1,0 +1,61 @@
+<html>
+  <body>
+    <div class="navbar" >
+      <nav>
+          <a routerLink="/menus">Menus</a>
+          <a href="/livreur">Livreurs</a>
+          <a href="/recette">Recette</a>
+          <a href="/abonnement">Abonnement</a>
+          <a href="/commande">Commande</a>
+          <div class="animation start-Menus"></div>
+      </nav>
+  </div> 
+    <div *ngIf="main">
+    <hr>
+    <h1 class="titre">Cuisine</h1>
+    <form>
+    <input type="search" class="rech" placeholder="Recherche">
+    <button type="submit" class="btt" (click)="showA()">Ajouter</button>
+  </form>
+    <hr>
+<div class="row row-cols-1 row-cols-md-3">
+<div class="card" style="width: 18rem;" *ngFor="let temp of Repass">
+    <img src={{temp.img}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{temp.nom}}</h5>
+      <h5 class="prix">-- {{temp.prix}} TND</h5>
+      <p class="card-text">{{temp.ingredient}}.</p>
+      <div class="icon">
+      <img src="/assets/image/modifier-le-fichier.png" (click)="showB(temp)" alt="Modifier">
+      <img src="/assets/image/promotion.png" (click)="showC()" alt="Promoter">
+      <img src="/assets/image/supprimer.png" (click)="supprimerrep(temp)" alt="supprimer">
+      
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ajout" *ngIf="ajout">
+    
+  <form class="ajoutform" [formGroup]="formajout">
+    <h4 class="titre1">Ajouter un Repas !</h4>
+    <input type="file" class="in1" formControlName="img"><br><br>
+    <input type="text" class="in2" formControlName="nom" placeholder="Nom de Repas"><br><br>
+    <input type="text" class="in3" formControlName="prix" placeholder="Prix"><br><br>
+    <textarea formControlName="ing" class="in4" rows="3" placeholder="ingredients"></textarea> 
+    <button class="bt" (click)="ajoutRepas()">Ajouter</button>
+  </form>
+</div>
+<div class="modifier" *ngIf="up" >
+    
+  <form class="modform" [formGroup]="formmod">
+    <h4 class="titre1">Modifier le Repas !</h4>
+    <input type="file" class="in1" formControlName="img" ><br><br>
+    <input type="text" class="in2" formControlName="nom" placeholder="Nom de Repas"><br><br>
+    <input type="text" class="in3" formControlName="prix" placeholder="Prix"><br><br>
+    <textarea formControlName="ing" class="in4" rows="3" placeholder="ingredients"></textarea> 
+    <button class="bt" (click)="update()">Modifier</button>
+  </form>
+</div>
+</body>
+  </html>

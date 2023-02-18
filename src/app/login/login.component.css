@@ -1,0 +1,135 @@
+
+body{
+    background-image: url("C:/Users/PC/Desktop/project/FOODCHINY/src/assets/image/bgc.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:1000px;  
+    margin-top: -150px;
+    
+    
+  }
+.fr{
+  
+    color: #fff;
+    top: 50%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    background-color: rgba(0,0, 0,0.6);
+    width: 320px;
+    height: 420px;
+    padding: 70px 30px;
+}
+.fr h2{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    color:rgb(255, 9, 33);
+}
+.fr p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.fr input{
+    width: 200px;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #fff;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+.bt{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(255, 9, 33);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 250px;
+}
+.bt:hover{
+    cursor: pointer;
+    background: #ad1313;
+}
+.fr input:focus{
+    border-color:  rgb(255, 9, 33);
+ 
+}
+.fr a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+}
+.fr a{
+    color: darkgray;
+}
+.fr .button-box
+{
+	width:220px;
+	top: -20px;
+    left: 10px;
+	position:relative;
+	box-shadow: 0 0 20px 9px #ff61241f;
+	border-radius: 30px;
+}
+.fr .button-box .toggle-btn
+{
+	padding:10px 20px;
+	cursor:pointer;
+	background:transparent;
+	border:transparent;
+	outline: transparent;
+    width: 110px;
+    left: 0;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+  
+}
+.fr .button-box .annimation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background:rgb(255, 9, 33) ;
+    width: 110px;
+    border-radius: 30px;
+    transition: all .5s ease 0s;
+}
+.button-box button:nth-child(1){
+    width: 110px;
+}
+.button-box .start,.button-box button:nth-child(1):focus~.annimation{
+    width: 110px;
+    left:0;
+}
+.button-box button:nth-child(2){
+    width: 110px;
+}
+.button-box .start,.button-box button:nth-child(2):focus~.annimation{
+    width: 110px;
+    left: 110px;
+} 
+/*#log{
+    left: -10px;
+}
+#reg{
+    right: -10px;
+}*/
+.invaliff~.gg{
+    border-bottom: #ad1313;
+}
